@@ -1,0 +1,14 @@
+﻿<html>
+    <head>
+        <style type="text/css">
+            h1 { color: red}
+            .qrcode {
+            -ro-replacedelement: 'com.realobjects.xml.formatters.QrCodeFormatter';
+            }
+        </style>
+    </head>
+    <body>
+        <h1>QR Code demo</h1>
+        <div class="qrcode">%(text)s</div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+﻿<html>
+    <head>
+        <title>Produce &amp; Publish Showcase</title>
+        <link href="${request.static_url('ppdemo:static/css/bootstrap.min.css')}" rel="stylesheet" media="screen">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+    </head>
+
+    <body>
+        <div class="hero-unit">
+            <div metal:define-slot="headline"/>
+        </div>
+
+        <div id="myCarousel" class="carousel slide" style="width: 75%; margin-left: auto; margin-right: auto">
+          <div class="carousel-inner">
+            <div class="active item" style="text-align: center">
+                <img src="${request.static_url('ppdemo:static/slider01.jpg')}" />
+            </div>
+            <div class="item">
+                <img src="${request.static_url('ppdemo:static/slider02.jpg')}" />
+            </div>
+            <div class="item">
+                <img src="${request.static_url('ppdemo:static/slider03.jpg')}" />
+            </div>
+            <div class="item">
+                <img src="${request.static_url('ppdemo:static/slider04.jpg')}" />
+            </div>
+            <div class="item">
+                <img src="${request.static_url('ppdemo:static/slider05.jpg')}" />
+            </div>
+          </div>
+          <!-- Carousel nav -->
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+        </div>
+
+        <div metal:define-slot="content" />
+
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="${request.static_url('ppdemo:static/js/bootstrap.min.js')}"></script>
+
+        <script type="text/javascript">
+            $('#myCarousel').carousel({
+              interval: 5000
+              })
+      </script>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+pyramid
+pyramid_debugtoolbar
+zopyx.smartprintng.client
+waitress

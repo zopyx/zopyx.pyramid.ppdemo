@@ -1,0 +1,10 @@
+﻿<html>
+    <head>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <h1>MathML demo</h1>
+        <div class="mathml">%(text)s</div>
+    </body>
+</html>
