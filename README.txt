@@ -2,7 +2,7 @@ Produce & Publish Showcase
 ==========================
 
 Pyramid-based web-demo pacakage for demonstrating basic
-Produce & Publish features
+Produce & Publish features.
 
 Contact
 -------
