@@ -3,6 +3,7 @@ import mimetypes
 import tempfile
 from webob import Response
 from pyramid.view import view_config
+import pyramid.httpexceptions as exc
 from zopyx.smartprintng.client.zip_client import Proxy2 as Proxy
 
 @view_config(route_name='home', renderer='templates/index.pt')
@@ -28,6 +29,27 @@ def documentation(request):
 @view_config(name='about', renderer='templates/about.pt')
 def about(request):
     return {'project':'pp-demo'}
+
+@view_config(name='sent-mail-success', renderer='templates/contact-success.pt')
+def contact_success(request):
+    return {'project':'pp-demo'}
+
+
+@view_config(name='send-mail')
+def send_mail(request):
+    from pyramid_mailer import get_mailer
+    from pyramid_mailer.message import Message
+    mailer = get_mailer(request)
+    body = '%s\n%s\n%s' % (request.params['fullname'],
+                           request.params['email'],
+                           request.params['message'])
+
+    message = Message(subject=request.params['subject'],
+                      sender='admin@produce-and-publish.com',
+                      recipients=['info@zopyx.com'],
+                      body=body)
+    mailer.send(message)
+    raise exc.HTTPFound('sent-mail-success')
 
 def build_html(ident, **kw):
     filename = os.path.join(os.path.dirname(__file__), 'pdf-templates', '%s.pt' % ident)

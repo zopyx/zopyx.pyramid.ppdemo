@@ -9,6 +9,7 @@ CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 requires = [
     'pyramid',
     'pyramid_debugtoolbar',
+    'pyramid_mailer',
     'zopyx.smartprintng.client',
     'waitress',
     ]
