@@ -1,0 +1,18 @@
+﻿<html>
+    <head>
+        <style type="text/css">
+            .multicolumn {
+                column-count: %(columns)s;
+                column-gap: 40px;
+                -ro-column-count: %(columns)s;
+                -ro-column-gap: 40px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Multi-column demo</h1>
+        <div class="multicolumn">%(text)s</div>
+    </body>
+</html>
