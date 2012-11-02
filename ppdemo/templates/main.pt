@@ -190,18 +190,19 @@
       <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script src="${request.static_url('ppdemo:static/js/bootstrap.min.js')}"></script>
       <script src="${request.static_url('ppdemo:static/js/bootstrap-wysihtml5.js')}"></script>
+      <script src="${request.static_url('ppdemo:static/js/jquery.validate.min.js')}"></script>
 
     <script type="text/javascript">
       $('#myCarousel').carousel({
         interval: 3500
         });
 
-        $('textarea.editor').wysihtml5();
+      $('textarea.editor').wysihtml5();
 
-        $('#columns').bind('change', function() {
-            var val = $(this).val();
-            $('#range-value').html(val);
-        });
+      $('#columns').bind('change', function() {
+          var val = $(this).val();
+          $('#range-value').html(val);
+      });
 
     </script>
   </body>
