@@ -1,0 +1,31 @@
+﻿<div class="page-header" metal:define-macro="master">
+    <fieldset>
+        <legend>Unicode</legend>
+        <form method="post" action="generate-pdf" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Unicode</label>
+                <input type="hidden" name="ident" value="unicode" />
+                <div class="controls">
+                    <textarea style="width: 600px; height: 200px" name="text" class="text editor">
+<h2>Greek</h2>
+<p lang="el" xml:lang="el" dir="ltr">Σας το λέει φακέλους πρόσληψη, για φτιάξε νύχτας χρησιμοποίησέ θα, αυτήν μάλλον μετράει πω για'. Πέντε χρόνου δυσκολότερο ανά ώς. Της λέει σελίδων ως, ναι τρόπο φίλος ακούσει ώς. Πιο άτομο τοπικές διοίκηση με. Που αν πρώτης λοιπόν μέγιστη, αν περίπου ταξινομεί όρο. Τρόπο βγήκε φυσικά στα ως. Κλπ τη κώδικάς αναφέρονται αγοράζοντας, ας των τύπου ακούσει.
+</p>
+
+<h2>Hebrew</h2>
+<p lang="he" xml:lang="he" dir="rtl">כדור יסוד צרפתית של לוח, על שער קסאם מבוקשים. על זאת רוסית אנגלית קלאסיים, גם דרכה והגולשים שמו. תוכל לאחרונה בה בקר, בה רומנית ייִדיש תאולוגיה זאת. של מתן ייִדיש אתנולוגיה. שמו יכול העברית על. בה ביולי פולנית עקרונות סדר, של סדר נפלו בעברית, בהשחתה צרפתית זאת מה.
+ </p>
+
+<h2>Russian</h2>
+<p lang="ru" xml:lang="ru" dir="ltr">Миф ты нанять например закончить, закончить остальные предварительного или до. Он они ажиотажа разработке, эти йорке подумаем за, нет колёса понять дизайну их. Тд вы одного кандидата, на куча определения чем. Чем мы тебе совсем получаете, они от осколки периоды, это не образом инструменты преимущество. Сказать систему принять про бы, бог до либо весна собственный.
+ </p>
+                </textarea>
+                </div>                    
+            </div>                    
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Generate PDF</button>
+                </div>                    
+            </div>                    
+        </form>
+    </fieldset>
+</div>
