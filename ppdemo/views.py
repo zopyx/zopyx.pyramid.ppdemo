@@ -9,6 +9,26 @@ from zopyx.smartprintng.client.zip_client import Proxy2 as Proxy
 def index(request):
     return {'project':'pp-demo'}
 
+@view_config(name='contact', renderer='templates/contact.pt')
+def contact(request):
+    return {'project':'pp-demo'}
+
+@view_config(name='demo', renderer='templates/demo.pt')
+def demo(request):
+    return {'project':'pp-demo'}
+
+@view_config(name='references', renderer='templates/references.pt')
+def references(request):
+    return {'project':'pp-demo'}
+
+@view_config(name='documentation', renderer='templates/documentation.pt')
+def documentation(request):
+    return {'project':'pp-demo'}
+
+@view_config(name='about', renderer='templates/about.pt')
+def about(request):
+    return {'project':'pp-demo'}
+
 def build_html(ident, **kw):
     filename = os.path.join(os.path.dirname(__file__), 'pdf-templates', '%s.pt' % ident)
     html = open(filename).read() 
@@ -18,9 +38,9 @@ def build_html(ident, **kw):
 
 @view_config(name='generate-pdf')
 def generate_pdf(request):
-    text = request.params.get('text', '')
-    ident = str(request.params.get('ident', ''))
-    html = build_html(ident, text=text)
+    ident = str(request.params.get('ident'))
+    args = dict([(str(k), str(request.params.get(k, ''))) for k in request.params if k not in ('ident',)])
+    html = build_html(ident, **args)
 
     proxy = Proxy('http://demo:demo@pp-server.zopyx.com')
     dname = tempfile.mkdtemp()

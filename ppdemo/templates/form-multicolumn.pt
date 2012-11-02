@@ -1,0 +1,104 @@
+﻿<div class="page-header" metal:define-macro="master">
+    <fieldset>
+        <legend>Multi column text </legend>
+        <form method="post" action="generate-pdf" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Number columns</label>
+                <div class="controls">
+                    <input type="range" value="1" min="1" max="4" name="columns" id="columns" />
+                    <span id="range-value">1</span> columns
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label">Text</label>
+                <input type="hidden" name="ident" value="multicolumn" />
+                <div class="controls">
+                    <textarea style="width: 600px; height: 200px" name="text" class="text editor"> 
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Nibh libero, sagittis vel, hendrerit accumsan, pulvinar consequat, tellus.
+Donec varius dictum nisl. Vestibulum suscipit enim ac nulla.  Proin tincidunt.
+Proin sagittis. Curabitur auctor metus non mauris. Nunc condimentum nisl non
+augue. Donec leo urna, dignissim vitae, porttitor ut, iaculis sit amet, sem.
+</p>                        
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+inceptos himenaeos. Suspendisse potenti. Quisque augue metus, hendrerit sit
+amet, commodo vel, scelerisque ut, ante. Praesent euismod euismod risus. Mauris
+ut metus sit amet mi cursus commodo. Morbi congue mauris ac sapien. Donec
+justo. Sed congue nunc vel mauris. Pellentesque vehicula orci id libero. In hac
+habitasse platea dictumst. Nulla sollicitudin, purus id elementum dictum, dolor
+augue hendrerit ante, vel semper metus enim et dolor. Pellentesque molestie
+nunc id enim. Etiam mollis tempus neque. Duis tincidunt commodo elit.
+</p>                        
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Aenean pellentesque purus eu mi. Proin commodo, massa commodo dapibus
+elementum, libero lacus pulvinar eros, ut tincidunt nisl elit ut velit. Cras
+rutrum porta purus. Vivamus lorem. Sed turpis enim, faucibus quis, pharetra in,
+sagittis sed, magna. Curabitur ultricies felis ut libero. Nullam tincidunt enim
+eu nibh. Nunc eget ipsum in sem facilisis convallis. Proin fermentum risus.
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+cubilia Curae; Vestibulum hendrerit malesuada odio. Fusce ut elit ut augue
+sollicitudin blandit. Phasellus volutpat lorem. Duis non pede et neque luctus
+tincidunt. Duis interdum tempus elit.
+</p>                        
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Aenean metus. Vestibulum ac lacus. Vivamus porttitor, massa ut hendrerit
+bibendum, metus augue aliquet turpis, vitae pellentesque velit est vitae metus.
+Duis eros enim, fermentum at, sagittis id, lacinia eget, tellus. Nunc consequat
+pede et nulla. Donec nibh. Pellentesque cursus orci vitae urna. Cum sociis
+natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Pellentesque risus turpis, aliquet ac, accumsan vel, iaculis eget, enim.
+Pellentesque nibh neque, malesuada id, tempor vel, aliquet ut, eros. In hac
+habitasse platea dictumst. Integer neque purus, congue sed, mattis sed,
+vulputate ac, pede. Donec vestibulum purus non tortor. Integer at nunc.
+</p>                        
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Suspendisse fermentum velit quis sem. Phasellus suscipit nunc in risus. Nulla
+sed lectus. Morbi sollicitudin, diam ac bibendum scelerisque, enim tortor
+rhoncus sapien, vel posuere dolor neque in sem. Pellentesque tellus augue,
+tempus nec, laoreet at, porttitor blandit, leo. Phasellus in odio. Duis
+lobortis, metus eu laoreet tristique, pede mi congue mi, quis posuere augue
+nulla a augue. Pellentesque sed est. Mauris cursus urna id lectus. Integer
+dignissim feugiat eros. Sed tempor volutpat dolor. Vestibulum vel lectus nec
+mauris semper adipiscing.
+</p>                        
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Aliquam tincidunt enim sit amet tellus. Sed mauris nulla, semper tincidunt,
+luctus a, sodales eget, leo. Sed ligula augue, cursus et, posuere non, mollis
+sit amet, est. Mauris massa. Proin hendrerit massa. Phasellus eu purus. Donec
+est neque, dignissim a, eleifend vitae, lobortis ut, nibh. Nullam sed lorem.
+Proin laoreet augue quis eros. Suspendisse vehicula nunc ac nisi.
+</p>                        
+
+<h2>Lorem ipsum</h2>                        
+<p>                        
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce mi. Vivamus
+enim velit, condimentum sit amet, laoreet quis, fermentum non, ipsum. Etiam
+quis felis. Curabitur tincidunt, sapien et luctus faucibus, nibh nisi commodo
+arcu, vitae cursus neque ante sed elit. Sed sit amet.
+</p>                        
+
+
+                    </textarea>
+                </div>                    
+            </div>                    
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Generate PDF</button>
+                </div>                    
+            </div>                    
+        </form>
+    </fieldset>
+</div>

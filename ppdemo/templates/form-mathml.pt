@@ -6,7 +6,7 @@
                 <label class="control-label">Math ML text</label>
                 <input type="hidden" name="ident" value="mathml" />
                 <div class="controls">
-                    <textarea style="width: 600px; height: 200px" name="text" class="text" ><math:math mode="display" xmlns:math="http://www.w3.org/1998/Math/MathML">
+                    <textarea style="width: 600px; height: 150px" name="text" class="text" ><math:math mode="display" xmlns:math="http://www.w3.org/1998/Math/MathML">
 <math:mrow>
 <math:munderover>
 <math:mo>&#x222B;</math:mo>

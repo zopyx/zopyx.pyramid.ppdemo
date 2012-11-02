@@ -6,7 +6,7 @@
                 <label class="control-label">Unicode</label>
                 <input type="hidden" name="ident" value="unicode" />
                 <div class="controls">
-                    <textarea style="width: 600px; height: 200px" name="text" class="text editor">
+                    <textarea style="width: 600px; height: 150px" name="text" class="text editor">
 <h2>Greek</h2>
 <p lang="el" xml:lang="el" dir="ltr">Σας το λέει φακέλους πρόσληψη, για φτιάξε νύχτας χρησιμοποίησέ θα, αυτήν μάλλον μετράει πω για'. Πέντε χρόνου δυσκολότερο ανά ώς. Της λέει σελίδων ως, ναι τρόπο φίλος ακούσει ώς. Πιο άτομο τοπικές διοίκηση με. Που αν πρώτης λοιπόν μέγιστη, αν περίπου ταξινομεί όρο. Τρόπο βγήκε φυσικά στα ως. Κλπ τη κώδικάς αναφέρονται αγοράζοντας, ας των τύπου ακούσει.
 </p>
