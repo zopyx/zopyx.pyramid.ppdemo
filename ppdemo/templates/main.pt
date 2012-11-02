@@ -131,22 +131,19 @@
                 </p>
             </div><!--/span-->
             <div class="span5">
-                <h3>The Produce & Publish platform</h3>
-                <p>
-                Produce & Publish is both a platform and a framework for
-                authoring and generating documents in high-quality and various
-                output formats. The primary focus of the platform is PDF but it
-                also supports office-formats like Open-Office, Word, RTF and
-                most popular eBook formats. Client connectors integrate your
-                existing systems like content-management-systems, portals or
-                native applications through a standarized API with the Produce
-                & Publish server making the platform accessible within your
-                company or institution. The Produce & Publish Authoring
-                Environment gives you access and full control to content, look
-                & feel and the publication process through a single web-based
-                user-interface. The flexible and open API make Produce &
-                Publish the perfect choice for Web-to-Print applications for
-                generating documents based on dynamic data.  
+                <h3>Reasons for choosing Produce & Publish </h3>
+                <p> 
+            Produce & Publish is a low-price alternative to comparable commercial systems
+            like Adobe Indesign Server. Working with Produce & Publish does not require any
+            expensive tools and you do not need any special know-how.  Produce & Publish
+            uses XML/HTML + CSS for producing high-quality documents  - styles and
+            templates data can be designed and provided by an average programmer with HTML
+            and CSS skills. By using Produce & Publish components you get full access to
+            the source code. Produce & Publish is an open platform. The Produce & Publish
+            server provides an easy and unified API for all output formats (including
+            eBooks). No annual fees, no hidden costs, no adhesion contract - we play nice
+            with you.
+
                 </p>
             </div><!--/span-->
             <div class="span2 contact">
