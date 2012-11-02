@@ -24,11 +24,11 @@ $(document).ready(function(){
 	        email: true
 	      },
 	      subject: {
-	      	minlength: 2,
+	      	minlength: 5,
 	        required: true
 	      },
 	      message: {
-	        minlength: 2,
+	        minlength: 10,
 	        required: true
 	      }
 	    },
