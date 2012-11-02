@@ -54,14 +54,13 @@ def send_mail(request):
 def build_html(ident, **kw):
     filename = os.path.join(os.path.dirname(__file__), 'pdf-templates', '%s.pt' % ident)
     html = open(filename).read() 
-    html = unicode(html, 'utf-8')
-    html = html % kw
-    return html.encode('utf-8')
+    return html % kw
 
 @view_config(name='generate-pdf')
 def generate_pdf(request):
     ident = str(request.params.get('ident'))
-    args = dict([(str(k), str(request.params.get(k, ''))) for k in request.params if k not in ('ident',)])
+
+    args = dict([(str(k), request.params.get(k, u'').encode('utf-8')) for k in request.params if k not in ('ident',)])
     html = build_html(ident, **args)
 
     proxy = Proxy('http://demo:demo@pp-server.zopyx.com')

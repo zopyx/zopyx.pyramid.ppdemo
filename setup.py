@@ -12,6 +12,7 @@ requires = [
     'pyramid_mailer',
     'zopyx.smartprintng.client',
     'waitress',
+    'kotti',
     ]
 
 setup(name='pp-demo',
