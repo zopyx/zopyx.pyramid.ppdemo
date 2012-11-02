@@ -19,7 +19,7 @@ def build_html(ident, **kw):
 @view_config(name='generate-pdf')
 def generate_pdf(request):
     text = request.params.get('text', '')
-    ident = request.params.get('ident', '')
+    ident = str(request.params.get('ident', ''))
     html = build_html(ident, text=text)
 
     proxy = Proxy('http://demo:demo@pp-server.zopyx.com')
@@ -32,7 +32,8 @@ def generate_pdf(request):
     ct, dummy = mimetypes.guess_type(output_filename)
     basename, ext = os.path.splitext(output_filename)
     converter = 'pdf-pdfreactor'
-    headers = [('content-disposition','attachment; filename=%s-%s%s' % (ident, converter,ext)), ('content-type', ct)]
+    headers = [('content-disposition','attachment; filename=%s-%s%s' % (ident, converter,ext)), 
+               ('content-type', ct)]
     return Response(body=file(output_filename, 'rb').read(),
             content_type=ct,
             headerlist=headers)
