@@ -8,5 +8,6 @@
         <div tal:define="master load: form-mathml.pt" metal:use-macro="master" />
         <div tal:define="master load: form-unicode.pt" metal:use-macro="master" />
         <div tal:define="master load: form-multicolumn.pt" metal:use-macro="master" />
+        <div tal:define="master load: form-fonts.pt" metal:use-macro="master" />
     </div>
 </html>

@@ -1,0 +1,33 @@
+﻿<div class="page-header" metal:define-macro="master">
+    <fieldset>
+        <legend>Fonts</legend>
+        <form method="post" action="generate-pdf" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Fonts</label>
+                <input type="hidden" name="ident" value="fonts" />
+                <div class="controls">
+                    <textarea style="width: 600px; height: 150px" name="text" class="text" readonly="readonly">
+<h2>Arial</h2>
+<p style="font-family: Arial"> Vestibulum in pede adipiscing mi dapibus
+    condimentum. Etiam felis risus, condimentum in, malesuada eget, pretium ut,
+    sapien. Suspendisse placerat lectus venenatis lorem. Sed accumsan aliquam
+    enim. 
+</p>
+<h2>Courier</h2>
+<p style="font-family: Courier"> Vestibulum in pede adipiscing mi dapibus
+    condimentum. Etiam felis risus, condimentum in, malesuada eget, pretium ut,
+    sapien. Suspendisse placerat lectus venenatis lorem. Sed accumsan aliquam
+    enim. 
+</p>
+
+                </textarea>
+                </div>                    
+            </div>                    
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Generate PDF</button>
+                </div>                    
+            </div>                    
+        </form>
+    </fieldset>
+</div>
