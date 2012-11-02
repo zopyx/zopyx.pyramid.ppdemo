@@ -1,0 +1,42 @@
+﻿<html xmlns:metal="http://xml.zope.org/namespaces/metal" metal:use-macro="load: main.pt">                                                  
+    <div metal:fill-slot="hero-unit"></div>
+    <div metal:fill-slot="lead-in"></div>
+    <div metal:fill-slot="content">
+        <h2>Contact</h2>
+        <form method="post" action="send-mail" class="form-horizontal" id="contact-form">
+
+            <div class="control-group">
+                <label class="control-label" for="fullname">Your name</label>
+                <div class="controls">
+                    <input type="text" placeholder="Your name" value="" name="fullname" id="fullname"/>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="email" >Your email address</label>
+                <div class="controls">
+                    <input type="text" placeholder="Email address" value="" name="email" id="email"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="subject" >Subject</label>
+                <div class="controls">
+                    <input type="text" placeholder="Subject" value="" name="subject" id="subject"/>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="message" >Your message</label>
+                <div class="controls">
+                    <textarea id="message" name="message" placeholder="Your message" cols="60" rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Send email</button>
+                </div>                    
+            </div>                    
+
+        </form>
+    </div>
+</html>
