@@ -1,0 +1,32 @@
+﻿<div class="page-header" metal:define-macro="master">
+    <fieldset>
+        <legend>MathML</legend>
+        <form method="post" action="generate-pdf" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Math ML text</label>
+                <input type="hidden" name="ident" value="mathml" />
+                <div class="controls">
+                    <textarea style="width: 600px; height: 200px" name="text" class="text" ><math:math mode="display" xmlns:math="http://www.w3.org/1998/Math/MathML">
+<math:mrow>
+<math:munderover>
+<math:mo>&#x222B;</math:mo>
+<math:mn>1</math:mn>
+<math:mi>x</math:mi>
+</math:munderover>
+<math:mfrac>
+    <math:mi>dt</math:mi>
+    <math:mi>t</math:mi>
+</math:mfrac>
+</math:mrow>
+</math:math>
+                </textarea>
+                </div>                    
+            </div>                    
+            <div class="control-group">
+                <div class="controls">
+                    <button type="submit" class="btn btn-primary">Generate PDF</button>
+                </div>                    
+            </div>                    
+        </form>
+    </fieldset>
+</div>

@@ -25,12 +25,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
   </head>
 
   <body>
@@ -46,11 +40,12 @@
           <a class="brand" href="#">Produce &amp; Publish</a>
           <div class="nav-collapse collapse">
             <p class="navbar-text pull-right">
-              Logged in as <a href="#" class="navbar-link">Username</a>
             </p>
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="http://docs.produce-and-publish.com">Documentation</a></li>
+              <li><a href="references">References</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -104,12 +99,76 @@
                     <img src="${request.static_url('ppdemo:static/slider05.jpg')}" />
                 </div>
               </div>
+              <!-- Carousel nav -->
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
             </div>
                 <!--
                 <a href="http://www.produce-and-publish.com" class="btn btn-primary btn-large">Produce &amp; Publish website</a>
                 <a href="http://docs.produce-and-publish.com" class="btn btn-primary btn-large">Produce &amp; Documentation</a>
                 -->
           </div>
+          <div class="row-fluid">
+            <div class="span5">
+                <h2>The Produce & Publish platform</h2>
+                <p>
+                Produce & Publish is both a platform and a framework for
+                authoring and generating documents in high-quality and various
+                output formats. The primary focus of the platform is PDF but it
+                also supports office-formats like Open-Office, Word, RTF and
+                most popular eBook formats. Client connectors integrate your
+                existing systems like content-management-systems, portals or
+                native applications through a standarized API with the Produce
+                & Publish server making the platform accessible within your
+                company or institution. The Produce & Publish Authoring
+                Environment gives you access and full control to content, look
+                & feel and the publication process through a single web-based
+                user-interface. The flexible and open API make Produce &
+                Publish the perfect choice for Web-to-Print applications for
+                generating documents based on dynamic data.  
+                </p>
+            </div><!--/span-->
+            <div class="span5">
+                <h2>The Produce & Publish platform</h2>
+                <p>
+                Produce & Publish is both a platform and a framework for
+                authoring and generating documents in high-quality and various
+                output formats. The primary focus of the platform is PDF but it
+                also supports office-formats like Open-Office, Word, RTF and
+                most popular eBook formats. Client connectors integrate your
+                existing systems like content-management-systems, portals or
+                native applications through a standarized API with the Produce
+                & Publish server making the platform accessible within your
+                company or institution. The Produce & Publish Authoring
+                Environment gives you access and full control to content, look
+                & feel and the publication process through a single web-based
+                user-interface. The flexible and open API make Produce &
+                Publish the perfect choice for Web-to-Print applications for
+                generating documents based on dynamic data.  
+                </p>
+            </div><!--/span-->
+            <div class="span2 contact">
+                <h2>Contact</h2>
+                <div>
+                ZOPYX Limited
+                </div>
+                <div>
+                Hundskapfklinge 33
+                </div>
+                <div>
+                D-72074 Tübingen
+                </div>
+                <div>
+                Phone +49-7071-13841040
+                </div>
+                <div>
+                Fax +49-7071-7936840
+                </div>
+                <div>
+                    E-Mail: <a href="mailto:info@zopyx.com">info@zopyx.com</a>
+                </div>
+            </div>
+          </div><!--/row-->
           <div class="row-fluid">
             <div class="span9">
               <div metal:define-slot="content" />
@@ -121,7 +180,7 @@
       <hr>
 
       <footer>
-        <p>&copy; ZOPYX Limited, 2012</p>
+        <p>Produce &amp; Publish is &copy; ZOPYX Limited, 2012</p>
       </footer>
 
     </div><!--/.fluid-container-->

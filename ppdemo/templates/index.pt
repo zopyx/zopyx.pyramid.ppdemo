@@ -1,58 +1,7 @@
 ﻿<html xmlns:metal="http://xml.zope.org/namespaces/metal" metal:use-macro="load: main.pt">                                                  
-
-    <h1 metal:fill-slot="headline">Produce & Publish interactive showcase</h1>
-
-    <div  metal:fill-slot="content">
-        <div class="page-header">
-            <fieldset>
-                <legend>QR codes</legend>
-                <form method="post" action="generate-pdf" class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label">Text for QR codes</label>
-                        <div class="controls">
-                            <input type="hidden" name="ident" value="qrcode" />
-                            <textarea name="text" class="text" placeholder="http://www.heise.de" rows="3" cols="60" ></textarea>
-                        </div>                    
-                     </div>                    
-                    <div class="control-group">
-                        <div class="controls">
-                            <button data-loading-text="Please wait" type="submit" class="btn btn-primary">Generate PDF</button>
-                        </div>                    
-                    </div>                    
-                </form>
-            </fieldset>
-        </div>
-        <div class="page-header">
-            <fieldset>
-                <legend>MathML</legend>
-                <form method="post" action="generate-pdf" class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label">Math ML text</label>
-                        <input type="hidden" name="ident" value="mathml" />
-                        <div class="controls">
-                            <textarea style="width: 600px; height: 200px" name="text" class="text" ><math:math mode="display" xmlns:math="http://www.w3.org/1998/Math/MathML">
-<math:mrow>
-    <math:munderover>
-        <math:mo>&#x222B;</math:mo>
-        <math:mn>1</math:mn>
-        <math:mi>x</math:mi>
-    </math:munderover>
-        <math:mfrac>
-            <math:mi>dt</math:mi>
-            <math:mi>t</math:mi>
-        </math:mfrac>
-    </math:mrow>
-</math:math>
-                        </textarea>
-                        </div>                    
-                    </div>                    
-                    <div class="control-group">
-                        <div class="controls">
-                            <button type="submit" class="btn btn-primary">Generate PDF</button>
-                        </div>                    
-                    </div>                    
-                </form>
-            </fieldset>
-        </div>
+    <div metal:fill-slot="content">
+        <div tal:define="master load: form-qrcode.pt" metal:use-macro="master" />
+        <div tal:define="master load: form-mathml.pt" metal:use-macro="master" />
+        <div tal:define="master load: form-unicode.pt" metal:use-macro="master" />
     </div>
 </html>

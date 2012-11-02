@@ -1,0 +1,19 @@
+﻿<div class="page-header" metal:define-macro="master">
+    <fieldset>
+        <legend>QR codes</legend>
+        <form method="post" action="generate-pdf" class="form-horizontal">
+            <div class="control-group">
+                <label class="control-label">Text for QR codes</label>
+                <div class="controls">
+                    <input type="hidden" name="ident" value="qrcode" />
+                    <textarea name="text" class="text" placeholder="http://www.heise.de" rows="3" cols="60" ></textarea>
+                </div>                    
+             </div>                    
+            <div class="control-group">
+                <div class="controls">
+                    <button data-loading-text="Please wait" type="submit" class="btn btn-primary">Generate PDF</button>
+                </div>                    
+            </div>                    
+        </form>
+    </fieldset>
+</div>
