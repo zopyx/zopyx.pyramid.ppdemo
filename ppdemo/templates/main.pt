@@ -6,6 +6,7 @@
     <link href="${request.static_url('ppdemo:static/css/bootstrap.min.css')}" rel="stylesheet" media="screen">
     <link href="${request.static_url('ppdemo:static/css/bootstrap-responsive.css')}" rel="stylesheet" media="screen">
     <link href="${request.static_url('ppdemo:static/css/bootstrap-wysihtml5.css')}" rel="stylesheet" media="screen">
+    <link href="${request.static_url('ppdemo:static/css/app.css')}" rel="stylesheet" media="screen">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -186,11 +187,12 @@
 
     </div><!--/.fluid-container-->
         
-      <script src="${request.static_url('ppdemo:static/js/wysihtml5-0.3.0.js')}"></script>
-      <script src="http://code.jquery.com/jquery-latest.js"></script>
-      <script src="${request.static_url('ppdemo:static/js/bootstrap.min.js')}"></script>
-      <script src="${request.static_url('ppdemo:static/js/bootstrap-wysihtml5.js')}"></script>
-      <script src="${request.static_url('ppdemo:static/js/jquery.validate.min.js')}"></script>
+    <script src="${request.static_url('ppdemo:static/js/wysihtml5-0.3.0.js')}"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="${request.static_url('ppdemo:static/js/bootstrap.min.js')}"></script>
+    <script src="${request.static_url('ppdemo:static/js/bootstrap-wysihtml5.js')}"></script>
+    <script src="${request.static_url('ppdemo:static/js/jquery.validate.min.js')}"></script>
+    <script src="${request.static_url('ppdemo:static/js/app-logic.js')}"></script>
 
     <script type="text/javascript">
       $('#myCarousel').carousel({

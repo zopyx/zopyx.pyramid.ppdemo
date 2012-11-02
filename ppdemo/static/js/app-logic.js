@@ -15,8 +15,8 @@ $(document).ready(function(){
 	
 		$('#contact-form').validate({
 	    rules: {
-	      name: {
-	        minlength: 2,
+	      fullname: {
+	        minlength: 5,
 	        required: true
 	      },
 	      email: {
