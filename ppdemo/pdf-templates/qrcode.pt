@@ -1,5 +1,6 @@
 ﻿<html>
     <head>
+        <link rel="stylesheet" href="common.css" />
         <style type="text/css">
             h1 { color: red}
             .qrcode {
