@@ -1,4 +1,5 @@
 import os
+import shutil
 import mimetypes
 import tempfile
 from webob import Response
@@ -67,6 +68,9 @@ def generate_pdf(request):
     dname = tempfile.mkdtemp()
     fname = os.path.join(dname, 'index.html')
     file(fname, 'wb').write(html)
+
+    # copy stylesheets
+    shutil.copy(os.path.join(os.path.dirname(__file__), 'pdf-templates', 'common.css'), dname)
 
     result = proxy.convertZIP2(dname, converter_name='pdf-pdfreactor')
     output_filename = result['output_filename']
