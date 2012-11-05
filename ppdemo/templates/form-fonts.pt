@@ -1,5 +1,5 @@
-﻿<div class="page-header" metal:define-macro="master">
-    <fieldset id="fonts">
+﻿<div class="page-header" metal:define-macro="master" id="fonts">
+    <fieldset>
         <legend>Fonts</legend>
         <form method="post" action="generate-pdf" class="form-horizontal">
             <div class="control-group">

@@ -1,5 +1,5 @@
-﻿<div class="page-header" metal:define-macro="master">
-    <fieldset id="unicode">
+﻿<div class="page-header" metal:define-macro="master" id="unicode">
+    <fieldset>
         <legend>Unicode</legend>
         <form method="post" action="generate-pdf" class="form-horizontal">
             <div class="control-group">

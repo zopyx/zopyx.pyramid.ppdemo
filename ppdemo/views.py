@@ -64,8 +64,8 @@ def generate_pdf(request):
     args = dict([(str(k), request.params.get(k, u'').encode('utf-8')) for k in request.params if k not in ('ident',)])
     html = build_html(ident, **args)
 
-#    proxy = Proxy('http://demo:demo@pp-server.zopyx.com')
-    proxy = Proxy('http://localhost:6543')
+    proxy = Proxy('http://demo:demo@pp-server.zopyx.com')
+#    proxy = Proxy('http://localhost:6543')
     dname = tempfile.mkdtemp()
     fname = os.path.join(dname, 'index.html')
     file(fname, 'wb').write(html)

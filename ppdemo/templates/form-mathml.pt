@@ -1,4 +1,4 @@
-﻿<div class="page-header" metal:define-macro="master">
+﻿<div class="page-header" metal:define-macro="master" id="mathml">
     <fieldset>
         <legend>MathML</legend>
         <form method="post" action="generate-pdf" class="form-horizontal">
