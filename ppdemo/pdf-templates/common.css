@@ -1,5 +1,9 @@
-﻿body {
+@font-face {
+    font-family: Calligraffiti;
+    src: url(Calligraffiti.ttf);
+}
+
+body {
     font-family: Arial, Verdana, Sans-Serif;
-    color: blue;
     font-size: 12px;
 }
