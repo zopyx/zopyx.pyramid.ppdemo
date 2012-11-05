@@ -3,6 +3,21 @@
     src: url(Calligraffiti.ttf);
 }
 
+@font-face {
+    font-family: Destencil;
+    src: url(DESTENCI.ttf);
+}
+
+@font-face {
+    font-family: DigitalDream;
+    src: url(DIGITALDREAM.ttf);
+}
+
+@font-face {
+    font-family: MomsTypeWritter;
+    src: url(Moms_typewritter.ttf);
+}
+
 body {
     font-family: Arial, Verdana, Sans-Serif;
     font-size: 12px;
