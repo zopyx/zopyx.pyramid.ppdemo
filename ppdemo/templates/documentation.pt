@@ -9,7 +9,6 @@
         </div>
     </div>
     <div metal:fill-slot="sidebar">
-        &nbsp;
     </div>
     <div metal:fill-slot="lead-in"></div>
 </html>

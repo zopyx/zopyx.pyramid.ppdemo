@@ -5,6 +5,7 @@
   display: inline-block;
   text-indent: -9999px;
 }
+
 label.error {
   font-weight: bold;
   color: red;
@@ -12,8 +13,13 @@ label.error {
   margin-top: 2px;
 }
 
-
 .demo-text {
+    font-size: 0.8em;
+    color: #aaaaaa;
+}
+
+footer {
+    text-align: center;
     font-size: 0.8em;
     color: #aaaaaa;
 }

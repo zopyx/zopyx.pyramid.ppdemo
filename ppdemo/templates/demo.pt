@@ -4,6 +4,7 @@
     </div>
 
     <div metal:fill-slot="sidebar">
+        <div class="well sidebar-nav sidebar-nav-fixed">
             <ul class="nav nav-list">
               <li class="nav-header">Available demos</li>
               <li class="active"><a href="#qrcode">QR codes</a></li>
@@ -12,6 +13,7 @@
               <li><a href="#multicolumn">Multi column</a></li>
               <li><a href="#fonts">Fonts</a></li>
             </ul>
+        </div>
     </div>
 
     <div metal:fill-slot="lead-in"></div>

@@ -58,9 +58,8 @@
     <div class="container-fluid" id="sidebar">
       <div class="row-fluid">
         <div class="span3">
-          <div class="well sidebar-nav sidebar-nav-fixed">
-            <div metal:define-slot="sidebar" />
-          </div><!--/.well -->
+          <div metal:define-slot="sidebar" />
+          &nbsp;
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit" metal:define-slot="hero-unit">
@@ -153,7 +152,7 @@
           </div><!--/row-->
           <div class="row-fluid">
             <div class="span9">
-              <div metal:define-slot="content" />
+                <div metal:define-slot="content" />
             </div><!--/span-->
           </div><!--/row-->
         </div><!--/span-->
