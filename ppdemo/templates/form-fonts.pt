@@ -1,6 +1,12 @@
 ﻿<div class="page-header" metal:define-macro="master">
     <fieldset>
         <legend>Fonts</legend>
+        <div>
+            This demonstration generates a sample page using
+            different fonts. Our PDF converters can deal with TrueType fonts,
+            OpenType fonts and Webfonts.
+
+        </div>
         <form method="post" action="generate-pdf" class="form-horizontal">
             <div class="control-group">
                 <label class="control-label">Fonts</label>
