@@ -8,5 +8,8 @@
             <a href="http://docs.produce-and-publish.com"><button class="btn btn-primary" >Visit Produce &amp; Publish Documentation site</button></a>
         </div>
     </div>
+    <div metal:fill-slot="sidebar">
+        &nbsp;
+    </div>
     <div metal:fill-slot="lead-in"></div>
 </html>

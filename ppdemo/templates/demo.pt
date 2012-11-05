@@ -2,6 +2,18 @@
     <div metal:fill-slot="hero-unit">
         <h1>Produce &amp; Publish Demos</h1>
     </div>
+
+    <div metal:fill-slot="sidebar">
+            <ul class="nav nav-list">
+              <li class="nav-header">Available demos</li>
+              <li class="active"><a href="#qrcode">QR codes</a></li>
+              <li><a href="#mathml">MathML</a></li>
+              <li><a href="#unicode">Unicode</a></li>
+              <li><a href="#multicolumn">Multi column</a></li>
+              <li><a href="#fonts">Fonts</a></li>
+            </ul>
+    </div>
+
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
         <div tal:define="master load: form-qrcode.pt" metal:use-macro="master" />
