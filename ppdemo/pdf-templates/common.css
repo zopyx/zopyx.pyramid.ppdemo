@@ -13,11 +13,6 @@
     src: url(DIGITALDREAM.ttf);
 }
 
-@font-face {
-    font-family: MomsTypeWritter;
-    src: url(Moms_typewritter.ttf);
-}
-
 body {
     font-family: Arial, Verdana, Sans-Serif;
     font-size: 12px;

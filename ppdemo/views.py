@@ -64,8 +64,8 @@ def generate_pdf(request):
     args = dict([(str(k), request.params.get(k, u'').encode('utf-8')) for k in request.params if k not in ('ident',)])
     html = build_html(ident, **args)
 
-    proxy = Proxy('http://demo:demo@pp-server.zopyx.com')
-#    proxy = Proxy('http://localhost:6543')
+#    proxy = Proxy('http://demo:demo@pp-server.zopyx.com')
+    proxy = Proxy('http://localhost:6543')
     dname = tempfile.mkdtemp()
     fname = os.path.join(dname, 'index.html')
     file(fname, 'wb').write(html)
@@ -74,9 +74,7 @@ def generate_pdf(request):
     templ_dir = os.path.join(os.path.dirname(__file__), 'pdf-templates')
     for fn in os.listdir(templ_dir):
         base, ext = os.path.splitext(fn)
-        print base, ext
         if ext in ('.css', '.ttf'):
-            print fn
             shutil.copy(os.path.join(templ_dir, fn), dname)
 
     result = proxy.convertZIP2(dname, converter_name='pdf-pdfreactor')

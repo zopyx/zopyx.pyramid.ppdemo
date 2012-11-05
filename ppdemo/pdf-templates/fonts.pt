@@ -5,7 +5,7 @@
         </style>
     </head>
     <body>
-        <h1>Unicode demo</h1>
+        <h1>Fonts demo</h1>
         <div class="mathml">%(text)s</div>
     </body>
 </html>
