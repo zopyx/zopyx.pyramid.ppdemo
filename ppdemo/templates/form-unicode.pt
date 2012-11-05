@@ -1,7 +1,18 @@
 ﻿<div class="page-header" metal:define-macro="master">
-    <fieldset>
+    <fieldset id="unicode">
         <legend>Unicode</legend>
         <form method="post" action="generate-pdf" class="form-horizontal">
+            <div class="control-group">
+                <div class="controls demo-text">
+                All of our PDF converters can deal properly with unicode data.
+                So typesetting a multi-lingual documented with more than one
+                language is pretty easy. Keep in mind that the used font
+                must provide the glphys for the characters used inside the content.
+                Not all fonts from all characters. A <em>good</em> option
+                is using the <em>Arial Unicode</em> having a large variety of
+                unicode characters.
+                </div>
+            </div>
             <div class="control-group">
                 <label class="control-label">Unicode</label>
                 <input type="hidden" name="ident" value="unicode" />

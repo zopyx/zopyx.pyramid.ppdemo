@@ -3,6 +3,11 @@
         <legend>MathML</legend>
         <form method="post" action="generate-pdf" class="form-horizontal">
             <div class="control-group">
+                <div class="controls demo-text">
+                    Our PDF converters can handle MathML!
+                </div>                    
+            </div>                    
+            <div class="control-group">
                 <label class="control-label">Math ML text</label>
                 <input type="hidden" name="ident" value="mathml" />
                 <div class="controls">

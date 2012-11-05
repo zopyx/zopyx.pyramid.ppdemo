@@ -3,6 +3,14 @@
         <legend>QR codes</legend>
         <form method="post" action="generate-pdf" class="form-horizontal">
             <div class="control-group">
+                <div class="controls demo-text">
+                    Generating QR codes and bar codes is very easy using
+                    the PDFreactor converter. You put the text or data to be
+                    converted into a bar code or QR code into a dedicated
+                    HTML tag and configure the type of the code through CSS.
+                </div>                    
+            </div>                    
+            <div class="control-group">
                 <label class="control-label">Text for QR codes</label>
                 <div class="controls">
                     <input type="hidden" name="ident" value="qrcode" />
