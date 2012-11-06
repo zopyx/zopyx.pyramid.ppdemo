@@ -87,8 +87,8 @@ def generate_pdf(request):
             content_type=ct,
             headerlist=headers)
 
-@view_config(name='documentation', renderer='templates/sphinx.pt')
-def docs(request):
+
+def render_sphinx(request, docroot):
     """ This traverser renders a Sphinx content page stored as
         JSON below the 'documentation_json_' directory. The documentation
         is generated from Sphinx using the JSON builder 
@@ -100,15 +100,33 @@ def docs(request):
     base, ext = os.path.splitext(last_item)
 
     json_filename = last_item + '.fjson'
-    docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', dir_subpath, json_filename)
+    docpath = os.path.join(docroot, dir_subpath, json_filename)
     if os.path.exists(docpath):
         return json.loads(file(docpath, 'rb').read())
 
     else:
-        docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', dir_subpath, last_item)
+        docpath = os.path.join(docroot, dir_subpath, last_item)
         content_type = 'image/%s' % ext[1:]
         content_type, encoding = mimetypes.guess_type(docpath)
         headers = [('content-type', content_type)]
         return Response(body=file(docpath, 'rb').read(),
                         content_type=content_type,
                         headerlist=headers)
+
+@view_config(name='documentation', renderer='templates/sphinx.pt')
+def docs(request):
+    """ This traverser renders a Sphinx content page stored as
+        JSON below the 'documentation_json_' directory. The documentation
+        is generated from Sphinx using the JSON builder 
+        (or just "make json")
+    """
+    docroot = os.path.join(os.path.dirname(__file__), 'documentation_json')
+    return render_sphinx(request, docroot)
+        
+@view_config(name='r1', renderer='templates/sphinx.pt')
+def r1(request, docroot='www.produce-and-publish.com', subdir='references'):
+    """ docroot = root of the SVN Sphinx checkout.
+        subdir = root of the subdirectory below <docroot>/build/json
+    """
+    docroot = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', docroot, 'build', 'json', subdir))
+    return render_sphinx(request, docroot)
