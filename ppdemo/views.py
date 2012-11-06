@@ -24,10 +24,6 @@ def demo(request):
 def references(request):
     return {'project':'pp-demo'}
 
-@view_config(name='documentation', renderer='templates/documentation.pt')
-def documentation(request):
-    return {'project':'pp-demo'}
-
 @view_config(name='about', renderer='templates/about.pt')
 def about(request):
     return {'project':'pp-demo'}
@@ -90,7 +86,7 @@ def generate_pdf(request):
             content_type=ct,
             headerlist=headers)
 
-@view_config(name='docs', renderer='templates/sphinx.pt')
+@view_config(name='documentation', renderer='templates/sphinx.pt')
 def docs(request):
     """ This code smells """
     subpath = str(os.path.sep.join(request.subpath[:-1]))
