@@ -2,13 +2,12 @@
     <div metal:fill-slot="hero-unit">
         <div class="hero-unit">
             <h1>Documentation</h1>
+            <p class="description" tal:content="structure title" />
         </div>
     </div>
-    
     <div metal:fill-slot="sidebar"></div>
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
-        <h1 tal:content="structure title" />
         <p tal:content="structure body" />
     </div>
 </html>

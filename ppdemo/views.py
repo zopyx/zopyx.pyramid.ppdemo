@@ -92,11 +92,11 @@ def generate_pdf(request):
 
 @view_config(name='docs', renderer='templates/sphinx.pt')
 def docs(request):
-
+    """ This code smells """
     subpath = str(os.path.sep.join(request.subpath[:-1]))
     last_item = str(request.subpath[-1])
     base, ext = os.path.splitext(last_item)
-    if ext in ('.png',):
+    if ext in ('.png', '.gif', '.jpg', '.jpeg'):
         docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', subpath, last_item)
         content_type = 'image/%s' % ext[1:]
         headers = [('content-type', content_type)]

@@ -51,3 +51,8 @@ footer {
  .hero-unit .description {
     font-size: 16px;
  }
+
+
+ a.headerlink {
+    display: none;
+ }
