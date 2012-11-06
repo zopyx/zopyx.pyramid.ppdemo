@@ -59,7 +59,9 @@ def build_html(ident, **kw):
 
 @view_config(name='generate-pdf')
 def generate_pdf(request):
+
     ident = str(request.params.get('ident'))
+    converter_name = str(request.params.get('converter_name', 'pdf-pdfreactor'))
 
     args = dict([(str(k), request.params.get(k, u'').encode('utf-8')) for k in request.params if k not in ('ident',)])
     html = build_html(ident, **args)
@@ -77,12 +79,11 @@ def generate_pdf(request):
         if ext in ('.css', '.ttf'):
             shutil.copy(os.path.join(templ_dir, fn), dname)
 
-    result = proxy.convertZIP2(dname, converter_name='pdf-pdfreactor')
+    result = proxy.convertZIP2(dname, converter_name=converter_name)
     output_filename = result['output_filename']
     ct, dummy = mimetypes.guess_type(output_filename)
     basename, ext = os.path.splitext(output_filename)
-    converter = 'pdf-pdfreactor'
-    headers = [('content-disposition','attachment; filename=%s-%s%s' % (ident, converter,ext)), 
+    headers = [('content-disposition','attachment; filename=%s-%s%s' % (ident, converter_name, ext)), 
                ('content-type', ct)]
     return Response(body=file(output_filename, 'rb').read(),
             content_type=ct,
