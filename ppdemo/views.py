@@ -1,4 +1,5 @@
 import os
+import json
 import shutil
 import mimetypes
 import tempfile
@@ -88,3 +89,22 @@ def generate_pdf(request):
     return Response(body=file(output_filename, 'rb').read(),
             content_type=ct,
             headerlist=headers)
+
+@view_config(name='docs', renderer='templates/sphinx.pt')
+def docs(request):
+
+    subpath = str(os.path.sep.join(request.subpath[:-1]))
+    last_item = str(request.subpath[-1])
+    base, ext = os.path.splitext(last_item)
+    if ext in ('.png',):
+        docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', subpath, last_item)
+        content_type = 'image/%s' % ext[1:]
+        headers = [('content-type', content_type)]
+        return Response(body=file(docpath, 'rb').read(),
+                        content_type=content_type,
+                        headerlist=headers)
+    else:
+        json_filename = last_item + '.fjson'
+        docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', subpath, json_filename)
+        json_data = file(docpath, 'rb').read()
+        return json.loads(json_data)
