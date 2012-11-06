@@ -2,7 +2,7 @@
     <div metal:fill-slot="hero-unit">
         <div class="hero-unit">
             <h1>Documentation</h1>
-            <p> The Produce &amp; Publish documentation is currently maintained on
+            <p class="description"> The Produce &amp; Publish documentation is currently maintained on
                 its own server.
             </p>
             <a href="http://docs.produce-and-publish.com"><button class="btn btn-primary" >Visit Produce &amp; Publish Documentation site</button></a>

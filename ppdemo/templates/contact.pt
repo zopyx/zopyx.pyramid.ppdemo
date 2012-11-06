@@ -1,10 +1,13 @@
 ﻿<html xmlns:metal="http://xml.zope.org/namespaces/metal" metal:use-macro="load: main.pt">                                                  
-    <div metal:fill-slot="hero-unit"></div>
+    <div metal:fill-slot="hero-unit">
+        <div class="hero-unit">
+            <h1>Contact</h1>
+        </div>
+    </div>
     
     <div metal:fill-slot="sidebar"></div>
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
-        <h2>Contact</h2>
         <form method="post" action="send-mail" class="form-horizontal" id="contact-form">
 
             <div class="control-group">

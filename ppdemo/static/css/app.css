@@ -42,3 +42,12 @@ footer {
         width: auto;
      }
  }
+
+
+ .hero-unit h1 {
+    font-size: 40px;
+ }
+ 
+ .hero-unit .description {
+    font-size: 16px;
+ }

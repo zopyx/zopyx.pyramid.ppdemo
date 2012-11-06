@@ -1,8 +1,9 @@
 ﻿<html xmlns:metal="http://xml.zope.org/namespaces/metal" metal:use-macro="load: main.pt">                                                  
     <div metal:fill-slot="hero-unit">
-        <h1>Produce &amp; Publish Demos</h1>
+        <div class="hero-unit">
+            <h1>Produce &amp; Publish Demos</h1>
+        </div>
     </div>
-
     <div metal:fill-slot="sidebar">
         <div class="well sidebar-nav sidebar-nav-fixed">
             <ul class="nav nav-list">

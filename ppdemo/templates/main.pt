@@ -64,7 +64,7 @@
         <div class="span9">
           <div class="hero-unit" metal:define-slot="hero-unit">
             <h1>Produce &amp; Publish </h1>
-            <p>Produce &amp; Publish is a set of components for generating high-quality PDF documents and books, e-Books and a platform for building custom Web-to-Print applications.</p>
+            <p class="description">Produce &amp; Publish is a set of components for generating high-quality PDF documents and books, e-Books and a platform for building custom Web-to-Print applications.</p>
             <div id="myCarousel" class="carousel slide" style="width: 100%; margin-left: auto; margin-right: auto">
               <div class="carousel-inner">
                 <div class="active item" style="text-align: center">
