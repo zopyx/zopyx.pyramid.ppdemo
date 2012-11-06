@@ -8,6 +8,6 @@
     <div metal:fill-slot="sidebar"></div>
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
-        <p tal:content="structure body" />
+        <div class="sphinx-content" tal:content="structure body" />
     </div>
 </html>

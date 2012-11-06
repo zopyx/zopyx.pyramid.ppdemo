@@ -56,3 +56,15 @@ footer {
  a.headerlink {
     display: none;
  }
+
+.sphinx-content h1 {
+    font-size: 24px;
+}
+
+.sphinx-content h2 {
+    font-size: 20px;
+}
+
+.sphinx-content h3 {
+    font-size: 16px;
+}
