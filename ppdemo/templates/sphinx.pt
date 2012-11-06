@@ -2,12 +2,19 @@
     <div metal:fill-slot="hero-unit">
         <div class="hero-unit">
             <h1>Documentation</h1>
-            <p class="description" tal:content="structure title" />
+            <p class="description" tal:content="structure title|nothing" />
+            <ul class="breadcrumbs">
+                <li tal:repeat="d rellinks|python: ()">
+                    <a tal:attributes="href python: './' + d[0]"
+                        tal:content="structure python: d[1]" />
+                    <span tal:condition="python: not repeat['d'].end">&rsaquo;&rsaquo;</span>
+                </li>
+            </ul>
         </div>
     </div>
     <div metal:fill-slot="sidebar"></div>
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
-        <div class="sphinx-content" tal:content="structure body" />
+        <div class="sphinx-content" tal:content="structure body|nothing" />
     </div>
 </html>

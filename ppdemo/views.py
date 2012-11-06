@@ -3,6 +3,7 @@ import json
 import shutil
 import mimetypes
 import tempfile
+import mimetypes
 from webob import Response
 from pyramid.view import view_config
 import pyramid.httpexceptions as exc
@@ -88,19 +89,26 @@ def generate_pdf(request):
 
 @view_config(name='documentation', renderer='templates/sphinx.pt')
 def docs(request):
-    """ This code smells """
-    subpath = str(os.path.sep.join(request.subpath[:-1]))
+    """ This traverser renders a Sphinx content page stored as
+        JSON below the 'documentation_json_' directory. The documentation
+        is generated from Sphinx using the JSON builder 
+        (or just "make json")
+    """
+
+    dir_subpath = str(os.path.sep.join(request.subpath[:-1]))
     last_item = str(request.subpath[-1])
     base, ext = os.path.splitext(last_item)
-    if ext in ('.png', '.gif', '.jpg', '.jpeg'):
-        docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', subpath, last_item)
+
+    json_filename = last_item + '.fjson'
+    docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', dir_subpath, json_filename)
+    if os.path.exists(docpath):
+        return json.loads(file(docpath, 'rb').read())
+
+    else:
+        docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', dir_subpath, last_item)
         content_type = 'image/%s' % ext[1:]
+        content_type, encoding = mimetypes.guess_type(docpath)
         headers = [('content-type', content_type)]
         return Response(body=file(docpath, 'rb').read(),
                         content_type=content_type,
                         headerlist=headers)
-    else:
-        json_filename = last_item + '.fjson'
-        docpath = os.path.join(os.path.dirname(__file__), 'documentation_json', subpath, json_filename)
-        json_data = file(docpath, 'rb').read()
-        return json.loads(json_data)

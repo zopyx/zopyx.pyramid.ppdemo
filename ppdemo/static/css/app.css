@@ -57,6 +57,16 @@ footer {
     display: none;
  }
 
+ .sphinx-content h1, 
+ .sphinx-content h2, 
+ .sphinx-content h3, 
+ .sphinx-content h4, 
+ .sphinx-content h5 {
+    border-bottom: dotted thin #e0e0e0;
+    color: #0c3762;
+} 
+ 
+
 .sphinx-content h1 {
     font-size: 24px;
 }
@@ -67,4 +77,13 @@ footer {
 
 .sphinx-content h3 {
     font-size: 16px;
+}
+
+.breadcrumbs li {
+    display: inline;
+}
+
+ul.breadcrumbs {
+    margin-left: 0;
+    font-size: 0.8em;
 }
