@@ -1,0 +1,32 @@
+Download servers
+================
+
+ZOPYX Limited provides the Produce & Publish components through several
+download servers (depending on component and permissions).
+
+The following servers must be included with your buildout configuration
+using the ``find-links`` directive:
+
+::
+
+    find-links = ...
+
+        # For Plone 3.x (for both client connector and authoring environment V 1.X)
+        http://username:password@sdist.zopyx.com
+
+        # For Plone 4.x (Client Connector >= 2.0)
+        http://username:password@sdist-pp.zopyx.com
+
+        # For Plone 4.x (Authoring Environment >= 2.0)
+        http://username:password@sdist-pp-ae.zopyx.com
+
+
+For using the Produce & Publish Authoring Environment 2.0 you need to include
+the URL for the client connector as well:
+
+::
+
+    find-links = ...
+        http://username:password@sdist-pp.zopyx.com
+        http://username:password@sdist-pp-ae.zopyx.com
+

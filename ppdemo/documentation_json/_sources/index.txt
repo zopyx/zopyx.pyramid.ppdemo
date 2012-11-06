@@ -1,0 +1,94 @@
+.. Produce & Publish Authoring Environment documentation master file, created by
+   sphinx-quickstart on Tue Apr 12 15:26:21 2011.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to the Produce & Publish documentation. 
+
+Produce & Publish is a set
+of components for generating high-quality office-documents, PDF documents or e-books.
+
+For more information refer to the `Produce & Publish website <http://www.produce-and-publish.com>`_.
+
+Produce & Publish Authoring Environment
+=======================================
+
+.. toctree::
+   :maxdepth: 3
+
+   authoring/installation.rst
+   authoring/manage_content.rst
+   authoring/conversions_center.rst
+   authoring/conversions.rst
+   authoring/supplementary.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   release-notes/zopyx.authoring-docs/HISTORY.rst
+
+Produce & Publish Server
+========================
+
+.. toctree::
+   :maxdepth: 4
+
+   server/installation.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   release-notes/zopyx.smartprintng.server-docs/HISTORY.rst
+
+Produce & Publish Client Connector
+==================================
+
+.. toctree::
+   :maxdepth: 3
+
+   connector/installation.rst
+   connector/resource-directories.rst
+   connector/content-types.rst
+   connector/integration-ploneformgen.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   release-notes/zopyx.smartprintng.plone-docs/HISTORY.rst
+
+
+How-Tos
+=======
+  
+.. toctree::
+   :maxdepth: 1
+
+   howto/walkthrough.rst
+   howto/paste_from_word.rst
+   howto/edit_authors.rst
+   howto/s5-customization.rst      
+   howto/index-listing.rst
+
+Miscellaneous
+=============
+
+.. toctree::
+   :maxdepth: 1
+
+   misc/download-servers.rst
+
+Copyright & Credits
+===================
+
+.. toctree::
+   :maxdepth: 4
+
+   misc/copyright.rst
+   misc/credits.rst
+
+
+Indices and tables
+==================
+
+* :ref:`search`
+
