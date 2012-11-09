@@ -15,9 +15,8 @@
 
     <div metal:fill-slot="sidebar">
         <div class="well sidebar-nav sidebar-nav-fixed">
-            <ul class="nav nav-list" id="nav-list">
-              <li class="nav-header">Navigation</li>
-            </ul>
+              <li class="nav-header">Table of contents</li>
+              <span tal:replace="structure toc" />
         </div>
     </div>
 
