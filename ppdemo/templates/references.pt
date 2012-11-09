@@ -8,7 +8,6 @@
         </div>
     </div>
 
-    <div metal:fill-slot="sidebar"></div>
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
     </div>
