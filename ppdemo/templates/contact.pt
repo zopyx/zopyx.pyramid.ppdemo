@@ -8,6 +8,20 @@
     <div metal:fill-slot="sidebar"></div>
     <div metal:fill-slot="lead-in"></div>
     <div metal:fill-slot="content">
+
+        <div id="lead-in" class="">
+            Produce &amp; Publish is a product of 
+            <div id="company"> ZOPYX Limited </div>
+            <div id="street"> Charlottenstr. 37/1 </div>
+            <div id="city"> D-72070 Tübingen, Germany </div>
+            <div id="phone"> Phone +49-7071-793376 </div>
+            <div id="fax"> Fax +49-7071-7936840 </div>
+            <div id="email"> E-Mail: <a href="mailto:info@zopyx.com">info@zopyx.com</a> </div>
+            <div id="url"> Web: <a href="http://www.zopyx.com">www.zopyx.com</a> </div>
+        </div>
+
+
+
         <form method="post" action="send-mail" class="form-horizontal" id="contact-form">
 
             <div class="control-group">
