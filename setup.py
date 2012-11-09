@@ -14,7 +14,6 @@ requires = [
     'zopyx.smartprintng.client',
     'lxml',
     'waitress',
-    'kotti',
     ]
 
 setup(name='pp-demo',
