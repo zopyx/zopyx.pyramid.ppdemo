@@ -12,6 +12,7 @@ requires = [
     'pyramid_debugtoolbar',
     'pyramid_mailer',
     'zopyx.smartprintng.client',
+    'lxml',
     'waitress',
     'kotti',
     ]
