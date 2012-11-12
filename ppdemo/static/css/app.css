@@ -83,6 +83,15 @@ footer {
     margin-bottom: 2em;
 }
 
+.sphinx-content .testimonial {
+    background: #dddddd;
+    padding: 1.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    width: 700px;
+    border-radius: 25px;
+}
+
 .breadcrumbs li {
     display: inline;
 }
