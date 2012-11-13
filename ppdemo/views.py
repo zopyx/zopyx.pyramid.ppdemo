@@ -23,10 +23,6 @@ def contact(request):
 def demo(request):
     return {'project':'pp-demo'}
 
-@view_config(name='about', renderer='templates/about.pt')
-def about(request):
-    return {'project':'pp-demo'}
-
 @view_config(name='sent-mail-success', renderer='templates/contact-success.pt')
 def contact_success(request):
     return {'project':'pp-demo'}
@@ -140,6 +136,14 @@ class SphinxRenderer(object):
             return Response(body=file(docpath, 'rb').read(),
                             content_type=content_type,
                             headerlist=headers)
+
+            
+@view_config(name='about', renderer='templates/sphinx.pt')
+class AboutRenderer(SphinxRenderer):
+    view_name = 'about'
+    section_name = 'About'
+    docroot = 'www.produce-and-publish.com'
+    subdir = 'about'
 
 @view_config(name='references', renderer='templates/sphinx.pt')
 class ReferencesRenderer(SphinxRenderer):
