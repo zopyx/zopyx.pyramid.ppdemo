@@ -44,7 +44,7 @@
             <p class="navbar-text pull-right">
             </p>
             <ul class="nav">
-              <li class="active" ><a href="/about">About</a></li>
+              <li><a href="/about/index">Produce & Publish</a></li>
               <li><a href="/documentation/index">Documentation</a></li>
               <li><a href="/demo">Demo</a></li>
               <li><a href="/references/index">References</a></li>
@@ -161,7 +161,10 @@
       <hr>
 
       <footer id="footer">
-        <p>Produce &amp; Publish is &copy; ZOPYX Limited, 2012</p>
+          <p>Produce &amp; Publish is &copy; ZOPYX Limited, 2012 &bull; 
+              <a href="http://www.zopyx.com">www.zope.com</a> &bull;
+              <a href="mailto:info@zopyx.com">info@zopyx.com</a>
+          </p>
       </footer>
 
     </div><!--/.fluid-container-->

@@ -1,0 +1,29 @@
+<html xmlns:metal="http://xml.zope.org/namespaces/metal" metal:use-macro="load: main.pt">                                                  
+    <div metal:fill-slot="hero-unit">
+        <div class="hero-unit">
+            <h1>Information about Produce & Publish</h1>
+            <p class="description" tal:content="structure title|nothing" />
+        </div>
+    </div>
+
+    <div metal:fill-slot="sidebar">
+        <div class="well sidebar-nav sidebar-nav-fixed">
+            <ul class="nav nav-list">
+              <li class="nav-header">Table of contents</li>
+              <li><a href="/about/why-using-produce-and-publish">Why using Produce & Publish</a></li>
+              <li><a href="/about/whats-new-in-version-2.0">What's new in version 2.0</a></li>
+              <li><a href="/about/usecases">Usecases</a></li>
+              <li><a href="/about/comparison">Comparison</a></li>
+              <li><a href="/about/pricing">Prices</a></li>
+              <li><a href="/about/converters">Converters</a></li>
+              <li><a href="/about/partnerprogram">Partner program</a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div metal:fill-slot="lead-in"></div>
+    <div metal:fill-slot="content">
+        <div class="sphinx-content" tal:content="structure body|nothing" />
+    </div>
+
+</html>

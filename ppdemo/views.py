@@ -138,14 +138,14 @@ class SphinxRenderer(object):
                             headerlist=headers)
 
             
-@view_config(name='about', renderer='templates/sphinx.pt')
+@view_config(name='about', renderer='templates/sphinx-about.pt')
 class AboutRenderer(SphinxRenderer):
     view_name = 'about'
     section_name = 'About'
     docroot = 'www.produce-and-publish.com'
     subdir = 'about'
 
-@view_config(name='references', renderer='templates/sphinx.pt')
+@view_config(name='references', renderer='templates/sphinx-references.pt')
 class ReferencesRenderer(SphinxRenderer):
     view_name = 'references'
     section_name = 'References'
