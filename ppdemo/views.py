@@ -51,8 +51,11 @@ class PDFRenderer(object):
         self.request = request
 
     def build_html(self, ident, **kw):
-        filename = os.path.join(os.path.dirname(__file__), 'pdf-templates', '%s.pt' % ident)
-        html = open(filename).read() 
+        filename = os.path.join(
+            os.path.dirname(__file__), 'pdf-templates', f'{ident}.pt'
+        )
+
+        html = open(filename).read()
         return html % kw
 
     def __call__(self):
@@ -79,8 +82,14 @@ class PDFRenderer(object):
         output_filename = result['output_filename']
         ct, dummy = mimetypes.guess_type(output_filename)
         basename, ext = os.path.splitext(output_filename)
-        headers = [('content-disposition','attachment; filename=%s-%s%s' % (ident, converter_name, ext)), 
-                   ('content-type', ct)]
+        headers = [
+            (
+                'content-disposition',
+                f'attachment; filename={ident}-{converter_name}{ext}',
+            ),
+            ('content-type', ct),
+        ]
+
         return Response(body=file(output_filename, 'rb').read(),
                 content_type=ct,
                 headerlist=headers)
@@ -96,7 +105,7 @@ class SphinxRenderer(object):
         root = lxml.html.fromstring(html)
         for img in root.xpath('.//img'):
             src = img.attrib['src']
-            src = '/%s/%s' % (view_name, re.sub('(.*_images)', '_images', src))
+            src = f"/{view_name}/{re.sub('(.*_images)', '_images', src)}"
             img.attrib['src'] = src
         return lxml.html.tostring(root, encoding=unicode)
 
@@ -109,7 +118,7 @@ class SphinxRenderer(object):
 
         docroot = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..', 'parts', 'documentation-checkout', self.docroot))
         if not os.path.exists(docroot):
-            raise ValueError('%s does not exist' % docroot)
+            raise ValueError(f'{docroot} does not exist')
 
         json_root = os.path.join(docroot, 'build', 'json', self.subdir)
         image_root = os.path.join(docroot, 'build', 'json', '_images')
@@ -117,20 +126,19 @@ class SphinxRenderer(object):
         dir_subpath = str(os.path.sep.join(self.request.subpath[:-1]))
         last_item = str(self.request.subpath[-1])
         base, ext = os.path.splitext(last_item)
-        json_filename = last_item + '.fjson'
+        json_filename = f'{last_item}.fjson'
         docpath = os.path.join(json_root, dir_subpath, json_filename)
         if os.path.exists(docpath):
             d = json.loads(file(docpath, 'rb').read())
             d['body'] = self.fix_image_links(d['body'], self.view_name)
-            d['home'] = dict(title=self.section_name, 
-                             link='/%s/index' % self.view_name)
+            d['home'] = dict(title=self.section_name, link=f'/{self.view_name}/index')
             return d
         else:
             if dir_subpath.startswith('_images'):
                 docpath = os.path.join(image_root, last_item)
             else:
                 docpath = os.path.join(json_root, dir_subpath, last_item)
-            content_type = 'image/%s' % ext[1:]
+            content_type = f'image/{ext[1:]}'
             content_type, encoding = mimetypes.guess_type(docpath)
             headers = [('content-type', content_type)]
             return Response(body=file(docpath, 'rb').read(),

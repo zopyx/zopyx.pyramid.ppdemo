@@ -81,40 +81,54 @@ except ImportError:
 
 
 def quote(c):
-    if sys.platform == 'win32':
-        if ' ' in c:
-            return '"%s"' % c  # work around spawn lamosity on windows
-    return c
+    return '"%s"' % c if sys.platform == 'win32' and ' ' in c else c
 
 cmd = 'from setuptools.command.easy_install import main; main()'
 ws = pkg_resources.working_set
 
-if USE_DISTRIBUTE:
-    requirement = 'distribute'
-else:
-    requirement = 'setuptools'
-
+requirement = 'distribute' if USE_DISTRIBUTE else 'setuptools'
 pythonpath = ws.find(pkg_resources.Requirement.parse(requirement)).location
 
 if is_jython:
     import subprocess
 
-    assert subprocess.Popen([sys.executable] + ['-c', quote(cmd), '-mqNxd',
-           quote(tmpeggs), 'zc.buildout' + VERSION],
-           env=dict(os.environ,
-               PYTHONPATH=pythonpath),
-           ).wait() == 0
+    assert (
+        subprocess.Popen(
+            (
+                [sys.executable]
+                + [
+                    '-c',
+                    quote(cmd),
+                    '-mqNxd',
+                    quote(tmpeggs),
+                    f'zc.buildout{VERSION}',
+                ]
+            ),
+            env=dict(os.environ, PYTHONPATH=pythonpath),
+        ).wait()
+        == 0
+    )
+
 
 else:
-    assert os.spawnle(
-        os.P_WAIT, sys.executable, quote(sys.executable),
-        '-c', quote(cmd), '-mqNxd', quote(tmpeggs), 'zc.buildout' + VERSION,
-        dict(os.environ,
-            PYTHONPATH=pythonpath),
-        ) == 0
+    assert (
+        os.spawnle(
+            os.P_WAIT,
+            sys.executable,
+            quote(sys.executable),
+            '-c',
+            quote(cmd),
+            '-mqNxd',
+            quote(tmpeggs),
+            f'zc.buildout{VERSION}',
+            dict(os.environ, PYTHONPATH=pythonpath),
+        )
+        == 0
+    )
+
 
 ws.add_entry(tmpeggs)
-ws.require('zc.buildout' + VERSION)
+ws.require(f'zc.buildout{VERSION}')
 import zc.buildout.buildout
 zc.buildout.buildout.main(args)
 shutil.rmtree(tmpeggs)
